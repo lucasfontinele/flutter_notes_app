@@ -42,7 +42,7 @@ class CreateNoteState extends State<CreateNotePage> {
                   if (description.isNotEmpty)
                     ElevatedButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          Navigator.pop(context, description);
                         },
                         child: const Text("Salvar"))
                 ])));

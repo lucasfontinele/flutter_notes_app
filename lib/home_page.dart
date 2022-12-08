@@ -32,9 +32,12 @@ class HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context,
+        onPressed: () async {
+          final description = await Navigator.push(context,
               MaterialPageRoute(builder: (context) => const CreateNotePage()));
+
+          notes.add(description);
+          setState(() {});
         },
         child: const Icon(Icons.add),
       ),
